@@ -1,0 +1,89 @@
+h1 {
+    color: burlywood;
+    font-size: 48px;
+    font-family: sans-serif;
+    border: 2px solid black;
+}
+header {
+    text-align: center;
+    background-size: cover;
+    background-color: sienna;
+    background-image: url("http://i.imgur.com/U2yEK9z.jpg");
+}
+img {
+    height: 200px;
+    width: 200px; 
+}
+.vitals {
+    display: inline;
+}
+#phone {
+    border: 2px solid;
+    font-size: 16px;
+    color: burlywood;
+}
+#email {
+    border: 2px solid;
+    font-size: 16px;
+    color: burlywood;
+}
+#address {
+    border: 2px solid;
+    font-size: 16px;
+    color: burlywood;
+}
+.jobs {
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color:cornflowerblue;
+}
+#DSG {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:antiquewhite;
+    margin: 10px 20px;
+}
+#NCMLP {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:antiquewhite;
+    margin: 10px 20px;
+}
+#Remis {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:antiquewhite;
+    margin: 10px 20px;
+}
+#Mayor {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:antiquewhite;
+    margin: 10px 20px;
+}
+h4 {
+    text-align: center;
+}
+#Wex {
+    text-align: center;
+    font-size: 56px;
+    color: burlywood;
+}
+#Eduheading {
+    text-align: center;
+    font-size: 56px;
+    color: burlywood;
+}
+.jobresps {
+    position: relative;
+    font-size: 18px;
+}
+
+.Schoolname {
+    text-align: left;
+}
+.Schooling {
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: darkolivegreen;
+}
