@@ -1,65 +1,113 @@
+* {
+    font-family: verdana
+}
+a {
+  color: beige;  
+}
+.Entirety {
+    background-image: url("http://i.imgur.com/GsNfiV5.jpg");
+    border-radius: 20px;
+    background-size: contain; 
+}
 h1 {
-    color: burlywood;
+    color: beige;
     font-size: 48px;
     font-family: sans-serif;
-    border: 2px solid black;
+    border: 2px solid ivory;
+    border-radius: 20px
 }
 header {
     text-align: center;
+    /*background-color: lightslategray;*/
+    background-image: url("http://i.imgur.com/iwFZflE.jpg");
     background-size: cover;
-    background-color: sienna;
-    background-image: url("http://i.imgur.com/U2yEK9z.jpg");
+    border-radius: 20px
 }
 img {
     height: 200px;
     width: 200px; 
+    border: 1px solid black;
+    border-radius: 12px;
 }
 .vitals {
-    display: inline;
+    display: inline-flex;
+    color: beige;
+    padding: 20px;
+    list-style: none;
+        
 }
 #phone {
     border: 2px solid;
     font-size: 16px;
-    color: burlywood;
+    color: beige;
+    padding: 20px;
+    font-weight: bold;
 }
 #email {
     border: 2px solid;
     font-size: 16px;
-    color: burlywood;
+    color: beige;
+    padding: 20px;
+    font-weight: bold;
 }
 #address {
     border: 2px solid;
     font-size: 16px;
-    color: burlywood;
+    color: beige;
+    padding: 20px;
+    font-weight: bold;
 }
 .jobs {
     border: 4px solid black;
-    border-radius: 10px;
-    background-color:cornflowerblue;
+    border-radius: 20px;
+    background-image: url("http://i.imgur.com/iwFZflE.jpg");
 }
 #DSG {
     border: 2px solid black;
-    border-radius: 10px;
-    background-color:antiquewhite;
-    margin: 10px 20px;
+    border-radius: 20px;
+    background-color: #132020;
+    margin: 5px 5px;
+    width: 880px;
+    padding: 20px;
+    height: 370px;
+    color: beige;
+
 }
 #NCMLP {
     border: 2px solid black;
-    border-radius: 10px;
-    background-color:antiquewhite;
-    margin: 10px 20px;
+    border-radius: 20px;
+    background-color: #132020;
+    margin: 5px 5px;
+    width: 880px;
+    padding: 20px;
+    height: 370px;
+    color: beige;
+
 }
 #Remis {
     border: 2px solid black;
-    border-radius: 10px;
-    background-color:antiquewhite;
-    margin: 10px 20px;
+    border-radius: 20px;
+    background-color: #132020;
+    margin: 5px 5px;
+    width: 880px;
+    padding: 20px;
+    height: 370px;
+    position: relative;
+    bottom: 22px;
+    color: beige;
+
 }
 #Mayor {
     border: 2px solid black;
-    border-radius: 10px;
-    background-color:antiquewhite;
-    margin: 10px 20px;
+    border-radius: 20px;
+    background-color: #132020;
+    margin: 5px 5px;
+    width: 880px;
+    padding: 20px;
+    height: 370px;
+    position: relative;
+    bottom: 22px;
+    color: beige;
 }
 h4 {
     text-align: center;
@@ -67,23 +115,68 @@ h4 {
 #Wex {
     text-align: center;
     font-size: 56px;
-    color: burlywood;
+    color: black;
+}
+.jobname {
+    font-size: 25px;
+}
+.DCjobs {
+    display: inline-block;
+}
+.INjobs {
+    display: inline-block;
+}
+#alljobs {
+    display: inline-block;
 }
 #Eduheading {
     text-align: center;
     font-size: 56px;
-    color: burlywood;
+    color: black;
 }
 .jobresps {
     position: relative;
-    font-size: 18px;
+    font-size: 19px;
 }
-
 .Schoolname {
     text-align: left;
+}
+.years {
+    float: right;
+}
+.Schoolheader {
+    display: inline;
+}
+.jobtitle {
+    font-style: italic;
+    font-size: 18px;
+}
+.jobduration {
+    font-style: normal;
+    font-size: 14px
+}
+.responsibilitiesheader {
+    font-weight: bold;
 }
 .Schooling {
     border: 4px solid black;
     border-radius: 10px;
-    background-color: darkolivegreen;
+    background-image: url("http://i.imgur.com/iwFZflE.jpg");
+    background-size: cover;
+        
+}
+#GWU {
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #132020;
+    margin: 20px 20px;
+    color: beige;
+}
+#Saintjoe {
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #132020;
+    margin: 20px 20px;
+    color: beige;
+
 }
