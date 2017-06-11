@@ -6,107 +6,96 @@ a {
 }
 .Entirety {
     background-image: url("http://i.imgur.com/GsNfiV5.jpg");
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background-size: contain; 
 }
 h1 {
     color: beige;
-    font-size: 48px;
+    font-size: 3.9rem;
     font-family: sans-serif;
-    border: 2px solid ivory;
-    border-radius: 20px
+    border: .25rem solid ivory;
+    border-radius: 1.25rem
 }
 header {
     text-align: center;
     /*background-color: lightslategray;*/
     background-image: url("http://i.imgur.com/iwFZflE.jpg");
     background-size: cover;
-    border-radius: 20px
+    border-radius: 1.25rem
 }
 img {
-    height: 200px;
-    width: 200px; 
-    border: 1px solid black;
-    border-radius: 12px;
+    height: 14%;
+    width: 16%; 
+    border: .125rem solid black;
+    border-radius: .85rem;
 }
 .vitals {
     display: inline-flex;
     color: beige;
-    padding: 20px;
+    padding: 1.5rem;
     list-style: none;
         
 }
 #phone {
-    border: 2px solid;
-    font-size: 16px;
+    border: .25rem solid;
+    font-size: 1rem;
     color: beige;
-    padding: 20px;
+    padding: 1.25rem;
     font-weight: bold;
 }
 #email {
-    border: 2px solid;
-    font-size: 16px;
+    border: .25rem solid;
+    font-size: 1rem;
     color: beige;
-    padding: 20px;
+    padding: 1.25rem;
     font-weight: bold;
 }
 #address {
-    border: 2px solid;
-    font-size: 16px;
+    border: .25rem solid;
+    font-size: 1rem;
     color: beige;
-    padding: 20px;
+    padding: 1.25rem;
     font-weight: bold;
 }
 .jobs {
-    border: 4px solid black;
-    border-radius: 20px;
+    border: .4rem solid black;
+    border-radius: 1.5rem;
     background-image: url("http://i.imgur.com/iwFZflE.jpg");
+    background-size: cover;
+    padding: 2rem
 }
 #DSG {
-    border: 2px solid black;
-    border-radius: 20px;
+    border: .4rem solid black;
+    border-radius: 1.5rem;
     background-color: #132020;
-    margin: 5px 5px;
-    width: 650px;
-    padding: 20px;
-    height: 370px;
+    margin: .3125rem .3125rem;
+    padding: 1.25rem;
     color: beige;
 
 }
 #NCMLP {
-    border: 2px solid black;
-    border-radius: 20px;
+      border: .4rem solid black;
+    border-radius: 1.5rem;
     background-color: #132020;
-    margin: 5px 5px;
-    width: 650px;
-    padding: 20px;
-    height: 370px;
-    color: beige;
+    margin: .3125rem .3125rem;
+    padding: 1.25rem;
+    color: beige;   
 
 }
 #Remis {
-    border: 2px solid black;
-    border-radius: 20px;
+      border: .4rem solid black;
+    border-radius: 1.5rem;
     background-color: #132020;
-    margin: 5px 5px;
-    width: 650px;
-    padding: 20px;
-    height: 370px;
-    position: relative;
-    bottom: 22px;
+    margin: .3125rem .3125rem;
+    padding: 1.25rem;
     color: beige;
-
 }
 #Mayor {
-    border: 2px solid black;
-    border-radius: 20px;
+       border: .4rem solid black;
+    border-radius: 1.5rem;
     background-color: #132020;
-    margin: 5px 5px;
-    width: 650px;
-    padding: 20px;
-    height: 370px;
-    position: relative;
-    bottom: 22px;
+    margin: .3125rem .3125rem;
+    padding: 1.25rem;
     color: beige;
 }
 h4 {
@@ -114,29 +103,26 @@ h4 {
 }
 #Wex {
     text-align: center;
-    font-size: 56px;
+    font-size: 4rem;
     color: black;
 }
 .jobname {
-    font-size: 25px;
+    font-size: 1.8rem;
 }
 .DCjobs {
-    display: inline-block;
 }
 .INjobs {
-    display: inline-block;
 }
 #alljobs {
-    display: inline-block;
 }
 #Eduheading {
     text-align: center;
-    font-size: 56px;
+    font-size: 4rem;
     color: black;
 }
 .jobresps {
     position: relative;
-    font-size: 19px;
+    font-size: 1.2rem;
 }
 .Schoolname {
     text-align: left;
@@ -149,34 +135,37 @@ h4 {
 }
 .jobtitle {
     font-style: italic;
-    font-size: 18px;
+    font-size: 1rem;
 }
 .jobduration {
     font-style: normal;
-    font-size: 14px
+    font-size: .8rem;
 }
 .responsibilitiesheader {
     font-weight: bold;
 }
 .Schooling {
-    border: 4px solid black;
-    border-radius: 10px;
+    border: .4rem solid black;
+    border-radius: 1.5rem;
     background-image: url("http://i.imgur.com/iwFZflE.jpg");
     background-size: cover;
+    padding: 2rem;
         
 }
 #GWU {
-    border: 2px solid black;
-    border-radius: 20px;
+    border: .4rem solid black;
+    border-radius: 1.5rem;
     background-color: #132020;
-    margin: 20px 20px;
+    margin: 1.5rem 1.5rem;
     color: beige;
+    padding: 1.25rem;
 }
 #Saintjoe {
-    border: 2px solid black;
-    border-radius: 20px;
+    border: .4rem solid black;
+    border-radius: 1.5rem;
     background-color: #132020;
-    margin: 20px 20px;
+    margin: 1.5rem 1.5rem;
     color: beige;
+    padding: 1.25rem;
 
 }
