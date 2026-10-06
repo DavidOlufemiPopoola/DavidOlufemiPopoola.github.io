@@ -169,3 +169,14 @@ h4 {
     padding: 1.25rem;
 
 }
+.projects-nav {
+    padding-bottom: 1.25rem;
+}
+.projects-nav a {
+    display: inline-block;
+    border: .25rem solid ivory;
+    border-radius: 1.25rem;
+    padding: .75rem 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+}
