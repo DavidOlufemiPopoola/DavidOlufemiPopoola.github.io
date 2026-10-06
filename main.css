@@ -29,34 +29,6 @@ img {
     border: .125rem solid black;
     border-radius: .85rem;
 }
-.vitals {
-    display: inline-flex;
-    color: beige;
-    padding: 1.5rem;
-    list-style: none;
-        
-}
-#phone {
-    border: .25rem solid;
-    font-size: 1rem;
-    color: beige;
-    padding: 1.25rem;
-    font-weight: bold;
-}
-#email {
-    border: .25rem solid;
-    font-size: 1rem;
-    color: beige;
-    padding: 1.25rem;
-    font-weight: bold;
-}
-#address {
-    border: .25rem solid;
-    font-size: 1rem;
-    color: beige;
-    padding: 1.25rem;
-    font-weight: bold;
-}
 .jobs {
     border: .4rem solid black;
     border-radius: 1.5rem;
