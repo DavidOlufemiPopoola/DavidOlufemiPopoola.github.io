@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>DeWalt Battery Add-On | David Olufemi Popoola</title>
+    <link rel="stylesheet" type="text/css" href="dewalt-pack.css"/>
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="../index.html">&larr; David Olufemi Popoola</a>
+        </nav>
+        <h1>DeWalt 20V Battery Add-On</h1>
+        <p class="tagline">A microcontroller power module that sits on top of a DeWalt 20V battery adapter.</p>
+        <ul class="toc">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#block-diagram">Block diagram</a></li>
+            <li><a href="#rails">Rail specs</a></li>
+            <li><a href="#sensing">Current sensing</a></li>
+            <li><a href="#housing">Housing</a></li>
+            <li><a href="#build-log">Build log</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>
+                DeWalt sells a battery-to-wire adapter that takes a 20V MAX pack and breaks its
+                terminals out into two leads, so the pack can run any DC load. This project adds a
+                3D printed housing on top of that adapter. Inside the housing, a microcontroller
+                watches the pack through current-sense shunts and drives three regulated outputs:
+                a fixed 12V rail, a fixed 5V rail and an adjustable rail.
+            </p>
+            <ul>
+                <li>Input: DeWalt 20V MAX pack (18V nominal, roughly 15&ndash;20V across a discharge)</li>
+                <li>Outputs: 12V, 5V and an adjustable rail, plus raw pack voltage</li>
+                <li>Monitoring: per-rail current and pack voltage, read by the microcontroller</li>
+                <li>Enclosure: printed shell that clips onto the existing adapter</li>
+            </ul>
+            <p class="note">Status: design in progress. Values below are targets, not measured results.</p>
+        </section>
+
+        <section id="block-diagram">
+            <h2>Block diagram</h2>
+            <figure>
+                <svg viewBox="0 0 720 340" role="img" aria-labelledby="bd-title">
+                    <title id="bd-title">Power flows from the 20V pack through a fuse and the main shunt to three regulators, each with its own shunt, all monitored by the microcontroller.</title>
+                    <defs>
+                        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                            <path d="M0,0 L10,5 L0,10 z" class="arrowhead"/>
+                        </marker>
+                    </defs>
+
+                    <rect class="block" x="10" y="140" width="110" height="60" rx="8"/>
+                    <text x="65" y="166">DeWalt 20V</text>
+                    <text x="65" y="184" class="sub">pack + adapter</text>
+
+                    <rect class="block" x="160" y="140" width="110" height="60" rx="8"/>
+                    <text x="215" y="166">Fuse +</text>
+                    <text x="215" y="184" class="sub">main shunt</text>
+
+                    <rect class="block" x="330" y="30" width="130" height="56" rx="8"/>
+                    <text x="395" y="54">12V buck</text>
+                    <text x="395" y="72" class="sub">+ shunt</text>
+
+                    <rect class="block" x="330" y="142" width="130" height="56" rx="8"/>
+                    <text x="395" y="166">5V buck</text>
+                    <text x="395" y="184" class="sub">+ shunt</text>
+
+                    <rect class="block" x="330" y="254" width="130" height="56" rx="8"/>
+                    <text x="395" y="278">Adjustable buck</text>
+                    <text x="395" y="296" class="sub">+ shunt</text>
+
+                    <rect class="block accent" x="540" y="130" width="160" height="80" rx="8"/>
+                    <text x="620" y="162">Microcontroller</text>
+                    <text x="620" y="182" class="sub">ADC / I&#178;C sensing,</text>
+                    <text x="620" y="198" class="sub">display, enables</text>
+
+                    <line x1="120" y1="170" x2="158" y2="170" marker-end="url(#arrow)"/>
+                    <path d="M270,170 H300 V58 H328" marker-end="url(#arrow)"/>
+                    <line x1="300" y1="170" x2="328" y2="170" marker-end="url(#arrow)"/>
+                    <path d="M300,170 V282 H328" marker-end="url(#arrow)"/>
+
+                    <path class="signal" d="M460,58 H500 V150 H538" marker-end="url(#arrow)"/>
+                    <line class="signal" x1="460" y1="170" x2="538" y2="170" marker-end="url(#arrow)"/>
+                    <path class="signal" d="M460,282 H500 V190 H538" marker-end="url(#arrow)"/>
+                    <path class="signal" d="M215,140 V110 H520 V140 H538" marker-end="url(#arrow)"/>
+                </svg>
+                <figcaption>Solid lines carry power; dashed lines are sense and control signals to the microcontroller.</figcaption>
+            </figure>
+        </section>
+
+        <section id="rails">
+            <h2>Rail specs</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rail</th>
+                            <th>Output</th>
+                            <th>Target current</th>
+                            <th>Regulator</th>
+                            <th>Connector</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12V</td>
+                            <td>12.0V fixed</td>
+                            <td>TBD</td>
+                            <td>Synchronous buck</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>5V</td>
+                            <td>5.0V fixed</td>
+                            <td>TBD</td>
+                            <td>Synchronous buck</td>
+                            <td>USB / TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Adjustable</td>
+                            <td>Set from the microcontroller or a pot, range TBD</td>
+                            <td>TBD</td>
+                            <td>Buck with adjustable feedback</td>
+                            <td>TBD</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                All three rails are bucks, since every output sits below the pack voltage. The
+                12V rail needs enough headroom that it stays in regulation as the pack sags toward
+                its cutoff.
+            </p>
+        </section>
+
+        <section id="sensing">
+            <h2>Shunt current sensing</h2>
+            <p>
+                Each rail and the main pack line carries a low-value shunt resistor. The voltage
+                across the shunt is proportional to current (V = I &times; R), and a current-sense
+                amplifier or monitor IC turns that small drop into something the microcontroller can
+                read.
+            </p>
+            <ul>
+                <li><strong>Placement:</strong> one shunt on the pack input, one on each rail output.</li>
+                <li><strong>Shunt value:</strong> chosen so full-scale current gives a usable drop
+                    without wasting much power (P = I&sup2; &times; R). Values TBD.</li>
+                <li><strong>Readout:</strong> pack voltage and per-rail current, used for a fuel
+                    gauge, overcurrent cutoff and logging.</li>
+            </ul>
+        </section>
+
+        <section id="housing">
+            <h2>Housing</h2>
+            <p>The printed shell clips onto the adapter and holds the board, shunts and output connectors.</p>
+            <div class="photo-grid">
+                <div class="photo-placeholder">CAD render coming soon</div>
+                <div class="photo-placeholder">Printed shell coming soon</div>
+                <div class="photo-placeholder">Mounted on adapter coming soon</div>
+            </div>
+        </section>
+
+        <section id="build-log">
+            <h2>Build log</h2>
+            <ol class="log">
+                <li>
+                    <time datetime="2026-10-06">Oct 6, 2026</time>
+                    <p>Project page started. Goals and architecture drafted.</p>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <a href="../index.html">Back to homepage</a>
+    </footer>
+</body>
+</html>
